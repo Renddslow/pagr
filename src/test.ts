@@ -26,5 +26,5 @@ test('pagr - returns a list with one separator when current is at least 4 away f
 });
 
 test('pagr - returns a list with two separators when there is at least 4 from start and end', (t) => {
-  t.deepEqual(pagr(3, 10, 5), [p(1), s(), p(3), p(4, true), p(5), s(), p(10)]);
+  t.deepEqual(pagr(4, 10, 5), [p(1), s(), p(4), p(5, true), p(6), s(), p(10)]);
 });

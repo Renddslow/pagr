@@ -24,8 +24,8 @@ const pagr = (
     return pages.map((p, idx) => pg(p, current === idx));
   }
 
-  const needFirstSep = max - 4 < current;
-  const needLastSep = current < bound - max + 4;
+  const needFirstSep = max - 2 < current;
+  const needLastSep = current < bound - max + 2;
 
   if (needFirstSep && !needLastSep) {
     return [
@@ -43,7 +43,7 @@ const pagr = (
     ];
   }
 
-  const pgCount = bound - 4;
+  const pgCount = max - 2;
   return [
     pg(1, current === 0),
     s(),
